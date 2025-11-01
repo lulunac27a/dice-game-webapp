@@ -1,17 +1,19 @@
-const numberOfDiceInput = document.getElementById("numDice");
-const rollDiceButton = document.getElementById("rollDice");
-const resultText = document.getElementById("result");
-let total = 0;
-let diceRolls = [];
+const numberOfDiceInput = document.getElementById("numDice"); //number of dice input
+const rollDiceButton = document.getElementById("rollDice"); //roll dice button
+const resultText = document.getElementById("result"); //result output text
+let total = 0; //set total to 0
+let diceRolls = []; //set list of dice rolls to empty list
 rollDiceButton.addEventListener("click", () => {
-    const numDice = numberOfDiceInput.value;
-    total = 0;
-    diceRolls = [];
+    //when roll dice button is clicked
+    const numDice = numberOfDiceInput.value; //get number of dice input value
+    total = 0; //reset total to 0
+    diceRolls = []; //reset dice rolls to empty list
     for (let i = 0; i < numDice; i++) {
-        const roll = Math.floor(Math.random() * 6) + 1;
-        diceRolls.push(roll);
-        total += roll;
+        //repeat for each dice
+        const roll = Math.floor(Math.random() * 6) + 1; //get random dice number
+        diceRolls.push(roll); //add roll to list of dice rolls
+        total += roll; //add rolled dice to total
     }
     resultText.innerText = `Dice Rolls: ${diceRolls.join(", ")}
-Total Roll: ${total}`;
+Total Roll: ${total}`; //update result output text
 });
