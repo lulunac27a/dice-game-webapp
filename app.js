@@ -5,7 +5,7 @@ let total = 0; //set total to 0
 let diceRolls = []; //set list of dice rolls to empty list
 rollDiceButton.addEventListener("click", () => {
     //when roll dice button is clicked
-    const numDice = numberOfDiceInput.value; //get number of dice input value
+    const numDice = parseInt(numberOfDiceInput.value); //get number of dice input value
     total = 0; //reset total to 0
     diceRolls = []; //reset dice rolls to empty list
     for (let i = 0; i < numDice; i++) {
