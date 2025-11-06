@@ -12,7 +12,7 @@ rollDiceButton.addEventListener("click", () => {
     diceRolls = []; //reset dice rolls to empty list
     for (let i = 0; i < numDice; i++) {
         //repeat for each dice
-        const roll = Math.floor(Math.random() * numSides) + 1; //get random dice number
+        const roll = Math.floor(Math.random() * numSides) + 1; //get random dice number based on number of sides
         diceRolls.push(roll); //add roll to list of dice rolls
         total += roll; //add rolled dice to total
     }
