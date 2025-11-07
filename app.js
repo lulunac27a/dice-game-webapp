@@ -5,6 +5,13 @@ const diceModeSelection = document.getElementById("diceMode"); //dice mode selec
 const resultText = document.getElementById("result"); //result output text
 let total = 0; //set total to 0
 let diceRolls = []; //set list of dice rolls to empty list
+diceModeSelection.addEventListener("click", () => {
+    if (diceModeSelection.value === "custom") {
+        numberOfSidesInput.disabled = false;
+    } else {
+        numberOfSidesInput.disabled = true;
+    }
+});
 rollDiceButton.addEventListener("click", () => {
     //when roll dice button is clicked
     const numDice = parseInt(numberOfDiceInput.value, 10); //get number of dice input value as integer
