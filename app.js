@@ -6,10 +6,13 @@ const resultText = document.getElementById("result"); //result output text
 let total = 0; //set total to 0
 let diceRolls = []; //set list of dice rolls to empty list
 diceModeSelection.addEventListener("click", () => {
+    //when dice mode selection button is clicked
     if (diceModeSelection.value === "custom") {
-        numberOfSidesInput.disabled = false;
+        //if dice mode selection value is custom mode
+        numberOfSidesInput.disabled = false; //enable number of sides input
     } else {
-        numberOfSidesInput.disabled = true;
+        //if dice mode selection value is normal mode
+        numberOfSidesInput.disabled = true; //disable number of sides input
     }
 });
 rollDiceButton.addEventListener("click", () => {
